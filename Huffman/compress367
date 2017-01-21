@@ -1,0 +1,9 @@
+#!/bin/bash
+
+OUTPUTFILE=$1".367"
+
+./frequency367 $1 "frequencylist"
+./createcode367 "frequencylist" "codebook"
+./encode367 "codebook" $1 "compressed" 
+cat "codebook" "compressed" > $OUTPUTFILE
+

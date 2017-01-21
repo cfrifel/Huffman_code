@@ -1,0 +1,50 @@
+EE 367 Machine Problem 2
+
+Name: Curtis Frifeldt
+Date: May 11, 2016
+
+
+Compression Ratio = .66, .63, .61
+The compression on average is about .63
+
+Instructions to compile
+
+	1.	make
+
+Using the scripts to compress a file:
+
+	1.	./compress367 <filename>
+	
+		NOTE: The compressed file will have an output of the format <filename>.367
+
+Using the scripts to decompress a file:
+
+	1.	./decompress367 <filename>.367
+
+		NOTE:	The decompressed file will have an output of the format <filename>
+
+Steps to compress/decompress without using the scripts:
+
+	1:	make
+	2:	./frequency367 <data file> <frequency file>
+			
+		NOTES:	<data file> is the file to be compressed
+			<frequency file> is the desired output name
+
+	3:	./createcode367 <frequency file> <codebook file>
+
+		NOTES:	<frequency file> is the output of frequency367
+			<codebook file> is the desired output name
+
+	4:	./encode367 <codebook file> <data file> <compressed data file>
+
+		NOTES:	<codebook file> is the output of createcode367
+			<data file> is the file to be compressed
+			<compressed data file> is the desired output name
+
+	5:	./decode367 <codebook file> <compressed data file> <uncompressed data file>
+
+		NOTES:	<codebook file> is the output of createcode367
+			<compressed data file> is the output of encode367
+			<uncompressed data file> is the desired output name.  This should be
+						your uncompressed file name.

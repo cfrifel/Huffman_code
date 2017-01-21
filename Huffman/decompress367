@@ -1,0 +1,10 @@
+#!/bin/bash
+
+INPUTFILE=$1
+OUTPUTFILE=${INPUTFILE%.*}
+CODEBOOK="codebookdecode"
+ENCODED="codeout"
+
+./decodesplit367 $1 $CODEBOOK $ENCODED
+./decode367 $CODEBOOK $ENCODED $OUTPUTFILE
+
